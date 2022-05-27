@@ -1,38 +1,83 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* ======= Menu =======
+      1. Generic
+      2. Navigation
+      3. Letter
+      4. Board
+  ==================== */
+
+
+/*
+      1. Generic
+*/
+body{
+  background-color: #121213;;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container{
+  margin: auto;
+  max-width: 1000px;
+  width: 100%;
+  min-height: calc(100vh - 50px);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/*
+      2. Navigation
+*/
+nav{
+  padding: 5px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #ffffff25;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.title{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 34px;
+  color: #FFFFFF;
+}
+
+/*
+
+      3.Letter
+
+*/
+
+.letter{
+  margin: 5px;
+  width: 62px;
+  height: 62px;
+  color: #FFFFFF;
+  font-size: 30px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ffffff4f;
+}
+
+/*
+
+      4. Board
+
+*/
+
+.board{
+  display: flex;
+  flex-direction: column;
+}
+
+.row{
+  display: flex;
 }
