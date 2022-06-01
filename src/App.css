@@ -3,6 +3,7 @@
   padding: 0;
 
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* ======= Menu =======
@@ -12,6 +13,7 @@
       4. Board
       5. Key
       6. Keyboard
+      7. EndGame
   ==================== */
 
 
@@ -68,6 +70,22 @@ nav{
   border: 1px solid #ffffff4f;
 }
 
+.correct{
+  background-color: #538d4e;
+}
+
+.wrong{
+  background-color: #86888a;
+}
+
+.inWord{
+  background-color: #b59f3b;
+}
+
+#disabled{
+  background-color: rgb(48, 48, 48);
+}
+
 /*
 
       4. Board
@@ -94,7 +112,7 @@ nav{
 */
 
 .key,
-.specialKey{
+#specialKey{
   margin: 0 6px 0 0;
   font-weight: bold;
   color: #FFFFFF;
@@ -109,8 +127,12 @@ nav{
   width: 43px;
 }
 
-.specialKey{
+#specialKey{
   width: 90px;
+}
+
+#good{
+  background-color: #538d4e;
 }
 
 /*
@@ -126,4 +148,41 @@ nav{
   justify-content: center;
   align-items: center;
   margin-bottom: 8px;
+}
+
+/*
+
+  7. EndGame
+
+*/
+
+.end_game{
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 50%;
+  background-color: #000000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.end_titles{
+  font-size: 24px;
+  color: #FFFFFF;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.reset{
+  margin-top: 20px;
+  padding: 8px 24px;
+  font-size: 20px;
+  background-color: #FFFFFF;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
 }

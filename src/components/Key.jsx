@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { AppContext } from '../App';
 
-const Key = ({val, keyType}) =>{
+const Key = ({val, keyType, disabled, good}) =>{
 
     const { enterClick, deleteClick, onSetLetter } = useContext(AppContext);
 
@@ -15,8 +15,10 @@ const Key = ({val, keyType}) =>{
         }
     }
 
+    const keyColor = (keyType === 'specialKey' ? 'specialKey' : disabled ? 'disabled' : good && 'good').toString();
+
     return(
-        <button className={ keyType === "specialKey" ? 'specialKey' : 'key'} onClick={setLetter}>
+        <button className='key' id={keyColor} onClick={setLetter}>
             {
                 val
             }
