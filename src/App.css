@@ -10,6 +10,8 @@
       2. Navigation
       3. Letter
       4. Board
+      5. Key
+      6. Keyboard
   ==================== */
 
 
@@ -21,18 +23,16 @@ body{
 }
 
 .container{
-  margin: auto;
-  max-width: 1000px;
-  width: 100%;
+  margin: 0 auto;
   min-height: calc(100vh - 50px);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 /*
+
       2. Navigation
+
 */
 nav{
   padding: 5px 20px;
@@ -55,12 +55,13 @@ nav{
 */
 
 .letter{
-  margin: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 4px;
   width: 62px;
   height: 62px;
   color: #FFFFFF;
   font-size: 30px;
-  font-weight: 900;
+  font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -75,9 +76,54 @@ nav{
 
 .board{
   display: flex;
+  flex-grow: 1;
   flex-direction: column;
+  align-self: center;
+  justify-content: center;
 }
 
 .row{
   display: flex;
+}
+
+
+/*
+
+      5. Key
+
+*/
+
+.key,
+.specialKey{
+  margin: 0 6px 0 0;
+  font-weight: bold;
+  color: #FFFFFF;
+  background-color: #818384;
+  border: 0;
+  height: 58px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.key{
+  width: 43px;
+}
+
+.specialKey{
+  width: 90px;
+}
+
+/*
+
+    6. Keyboard
+
+*/
+
+.keys_top,
+.keys_middle,
+.keys_bottom{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8px;
 }
